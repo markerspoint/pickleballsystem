@@ -3,9 +3,19 @@
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
 @theme {
     --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
+        'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-rallix-navy: #0a2540;
+    --color-rallix-blue: #0066ff;
+    --color-rallix-lime: #c6ff00;
+    --color-rallix-light: #f2f4f7;
+    --color-rallix-dark: #1f2937;
 }
