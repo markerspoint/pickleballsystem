@@ -83,7 +83,7 @@ export function WelcomeHero() {
                     </div>
                 </div>
 
-                <div className="z-10 -mt-40 flex flex-1 flex-col justify-center gap-8 text-center lg:max-w-lg lg:text-left">
+                <div className="z-10 -mt-36 flex flex-1 flex-col justify-center gap-8 text-center lg:max-w-lg lg:text-left">
                     <div className="space-y-4">
                         <h1 className="text-4xl leading-none font-black tracking-tight text-white uppercase sm:text-5xl lg:leading-[1.1]">
                             Smart Systems <br />
