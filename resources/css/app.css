@@ -8,6 +8,25 @@ html {
     scroll-behavior: smooth;
 }
 
+@utility bg-texture {
+    background-image: 
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E"),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100' viewBox='0 0 56 100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66ZM28 66L28 100M0 50L28 34M56 50L28 34M0 16L28 32L56 16M28 0L28 34' fill='none' stroke='%23ffffff' stroke-opacity='0.02' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
 @theme {
     --font-sans:
         'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',

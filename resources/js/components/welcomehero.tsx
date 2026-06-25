@@ -36,21 +36,11 @@ export function WelcomeHero() {
     ];
 
     return (
-        <section className="relative w-full overflow-hidden bg-rallix-navy px-4 pt-24 pb-12 sm:px-6 md:pt-32 md:pb-16 lg:px-8">
-            <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-16 lg:flex-row">
-                {/* Large background text behind the paddle */}
-                <div className="pointer-events-none absolute inset-0 z-0 flex flex-col items-center justify-center select-none">
-                    <div className="text-[12vw] leading-none font-black tracking-wider text-transparent uppercase opacity-40 [-webkit-text-stroke:1px_rgba(255,255,255,0.06)] lg:text-[10vw]">
-                        RALLIX
-                    </div>
-                    <div className="mt-2 text-[8vw] leading-none font-black tracking-widest text-rallix-lime/[0.04] uppercase lg:text-[7vw]">
-                        SYSTEMS
-                    </div>
-                </div>
-
+        <section className="relative w-full overflow-hidden px-4 pt-24 pb-12 sm:px-6 md:pt-32 md:pb-16 lg:px-8">
+            <div className="relative mx-auto flex max-w-7xl flex-col-reverse items-center justify-between gap-16 lg:flex-row lg:items-stretch">
                 {/* Left Side: Product Image & Hotspots */}
                 <div className="relative z-10 flex w-full flex-1 items-center justify-center">
-                    <div className="relative -mt-12 flex aspect-[1/2] w-full max-w-[420px] items-center justify-center md:-mt-20">
+                    <div className="animate-float relative -mt-12 flex aspect-[1/2] w-full max-w-[420px] items-center justify-center md:-mt-20">
                         <img
                             src="/img/asset/pickleball.png"
                             alt="Rallix Pickleball Paddle"
@@ -93,10 +83,9 @@ export function WelcomeHero() {
                     </div>
                 </div>
 
-                {/* Right Side: Slogan, Preview Card, and CTA */}
-                <div className="z-10 flex flex-1 flex-col justify-end gap-8 text-center lg:max-w-md lg:text-left">
+                <div className="z-10 -mt-40 flex flex-1 flex-col justify-center gap-8 text-center lg:max-w-lg lg:text-left">
                     <div className="space-y-4">
-                        <h1 className="text-4xl leading-none font-black tracking-tight text-white uppercase sm:text-5xl">
+                        <h1 className="text-4xl leading-none font-black tracking-tight text-white uppercase sm:text-5xl lg:leading-[1.1]">
                             Smart Systems <br />
                             <span className="text-rallix-lime">
                                 For Pickleball
@@ -109,37 +98,104 @@ export function WelcomeHero() {
                         </p>
                     </div>
 
-                    {/* Preview Card (Video style) */}
-                    <div className="group relative mx-auto flex max-w-[340px] gap-4 rounded-2xl border border-rallix-blue/15 bg-[#0E2849]/80 p-4 shadow-2xl backdrop-blur transition-all hover:border-rallix-lime/30 lg:mx-0">
-                        <div className="relative flex h-16 w-20 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-rallix-blue/10 bg-rallix-navy">
-                            <Play className="h-5 w-5 text-rallix-lime opacity-80 transition-transform group-hover:scale-110" />
-                            <div className="absolute right-1 bottom-1 flex items-center gap-0.5 rounded bg-rallix-lime px-1 py-0.5 text-[8px] font-black text-rallix-navy">
-                                <span className="h-1 w-1 animate-pulse rounded-full bg-rallix-navy" />
-                                LIVE
+                    {/* Feature Checklist */}
+                    <div className="my-4 space-y-3.5">
+                        <div className="flex items-start gap-3 text-left">
+                            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-rallix-lime/20 bg-rallix-lime/10 text-rallix-lime">
+                                <svg
+                                    className="h-3 w-3"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 className="text-xs font-bold tracking-wider text-white uppercase">
+                                    Automated Court Bookings
+                                </h4>
+                                <p className="mt-0.5 text-[11px] text-slate-400">
+                                    Reservations, player matching, and
+                                    split-payment billing simplified.
+                                </p>
                             </div>
                         </div>
-                        <div className="flex flex-col justify-center text-left">
-                            <span className="text-[9px] font-bold tracking-wider text-rallix-blue uppercase">
-                                Play Demo
-                            </span>
-                            <h4 className="mt-0.5 text-xs font-bold text-white">
-                                See the Rallix Arena Display
-                            </h4>
-                            <p className="mt-0.5 text-[10px] text-slate-400">
-                                Automatic lobby screen sync
-                            </p>
+
+                        <div className="flex items-start gap-3 text-left">
+                            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-rallix-blue/20 bg-rallix-blue/10 text-rallix-blue">
+                                <svg
+                                    className="h-3 w-3"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 className="text-xs font-bold tracking-wider text-white uppercase">
+                                    Lobby Scoreboard Sync
+                                </h4>
+                                <p className="mt-0.5 text-[11px] text-slate-400">
+                                    Cast active match scores and court occupancy
+                                    straight to arena screens.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-start gap-3 text-left">
+                            <div className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded border border-rallix-lime/20 bg-rallix-lime/10 text-rallix-lime">
+                                <svg
+                                    className="h-3 w-3"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="3"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                >
+                                    <polyline points="20 6 9 17 4 12" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 className="text-xs font-bold tracking-wider text-white uppercase">
+                                    Smart Skill Ratings
+                                </h4>
+                                <p className="mt-0.5 text-[11px] text-slate-400">
+                                    Track matches, run club ladders, and
+                                    auto-calculate player DUPR standings.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    {/* CTA Button */}
-                    <div className="flex justify-center lg:justify-start">
+                    {/* Double CTA Buttons */}
+                    <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
+                        <a
+                            href="#booking-showcase"
+                            className="inline-flex cursor-pointer items-center justify-center rounded-full bg-rallix-lime px-8 py-3.5 text-sm font-bold tracking-wide text-rallix-navy shadow-lg shadow-rallix-lime/20 transition-all hover:scale-[1.02] hover:bg-rallix-lime/90 active:scale-[0.98]"
+                        >
+                            Book a Demo
+                        </a>
                         <a
                             href="#features"
-                            className="inline-flex cursor-pointer items-center justify-center rounded-full bg-rallix-lime px-10 py-4 text-sm font-bold tracking-wide text-rallix-navy shadow-lg shadow-rallix-lime/20 transition-all hover:scale-[1.03] hover:bg-rallix-lime/90 active:scale-[0.97]"
+                            className="inline-flex cursor-pointer items-center justify-center rounded-full border border-slate-700/60 bg-rallix-navy/40 px-8 py-3.5 text-sm font-bold tracking-wide text-slate-200 transition-all hover:scale-[1.02] hover:border-rallix-lime/50 hover:bg-rallix-navy/60 active:scale-[0.98]"
                         >
-                            Get Started
+                            Find a Club
                         </a>
                     </div>
+
+                    {/* Social proof trust badge */}
+                    <p className="text-[10px] font-medium text-slate-500">
+                        Trusted by 100+ premium pickleball arenas nationwide.
+                    </p>
                 </div>
             </div>
         </section>
